@@ -36,8 +36,8 @@ pipeline {
    }
    stage('Build mysql image') {
      steps{
-       sh 'sudo docker build -t "10.138.0.3:5001/mgsgoms/mysql:$BUILD_NUMBER"  "$WORKSPACE"/mysql'
-        sh 'sudo docker push "10.138.0.3:5001/mgsgoms/mysql:$BUILD_NUMBER"'
+       sh 'sudo docker build -t "bharathi1902/mysqlapp:$BUILD_NUMBER"  "$WORKSPACE"/mysql'
+        sh 'sudo docker push "bharathi1902/mysqlapp:$BUILD_NUMBER"'
         }
       }
     stage('Deploy App') {
